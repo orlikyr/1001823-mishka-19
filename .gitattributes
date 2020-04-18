@@ -1,6 +1,7 @@
 # Общие настройки, которые всегда должны быть использованы для настроек вашего языка.
 # Автоматическое определение текстовых файлов и выполнение нормализации LF 
 # http://davidlaing.com/2012/09/19/customise-your-gitattributes-to-become-a-git-ninja/
+* text eol=lf
 * text=auto
 
 #
@@ -29,6 +30,9 @@
 *.sql text
 
 # Graphics
+*.webp binary
+*.woff binary
+*.woff2 binary
 *.png binary
 *.jpg binary
 *.jpeg binary
