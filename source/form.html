@@ -39,10 +39,12 @@
   <main class="page-form">
 
     <section class="form-page">
-      <h1 class="form-page__title page-caption">Вязание на заказ</h1>
+      <div class="form-page__wrapper">
+        <h1 class="form-page__title page-caption">Вязание на заказ</h1>
+      </div>
       <p class="form-page__text">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы
         свяжемся с вами, чтобы уточнить детали.</p>
-      <div class="form-page__wrapper">
+      <div class="form-page__container">
         <form class="form" action="https://echo.htmlacademy.ru" method="get">
           <fieldset class="form__fieldset">
             <legend class="form__legend">
@@ -128,7 +130,7 @@
               </li>
               <li class="form__item">
                 <label class="form__label form__label--text" for="patronymic">
-                  Имя:
+                  Отчество:
                 </label>
                 <input class="form__control form__control--text" type="text" name="patronymic" id="patronymic"
                   placeholder="Отчество, если желаете">
@@ -155,9 +157,9 @@
             <legend class="form__legend">
               Доп
             </legend>
-            <textarea name="comment-order" id="comment-order" cols="30"
+            <textarea class="form__comment-order" name="comment-order" id="comment-order" cols="30"
               rows="10">Опишите все ваши пожелания к заказу</textarea>
-            <p>*Поля обязательны для заполнения</p>
+            <p class="form__text">*Поля обязательны для заполнения</p>
             <button class="form__button-order button" type="submit">ОТПРАВИТЬ ЗАКАЗ</button>
           </fieldset>
         </form>
