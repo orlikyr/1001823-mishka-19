@@ -21,3 +21,19 @@
   .text(19px; 24px; 700);
   color: @color-catalog-link;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-part {
+    display: flex;
+    flex-direction: row;
+    width: 668px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-part {
+    width: 1050px;
+    margin: 0 auto;
+  }
+}
