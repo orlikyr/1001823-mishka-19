@@ -1,5 +1,4 @@
 .catalog-card__wrapper {
-  margin-left: 30px;
   margin-top: 30px;
 }
 
@@ -24,4 +23,24 @@
 .catalog-card__price {
   .text(15px; 24px; 700);
   color: @color-catalog-card-price;
+}
+
+@media (min-width: @tablet-width) {
+  .catalog-card__wrapper {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .catalog-card__text-wrapper {
+    width: 100%;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .catalog-card__wrapper {
+    width: 316px;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+  }
 }

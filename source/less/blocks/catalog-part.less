@@ -1,4 +1,4 @@
-.catalog-part {
+.catalog-part__wrapper {
   display: flex;
   flex-direction: column;
 }
@@ -23,17 +23,27 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-part {
+  .catalog-part__wrapper {
+    width: 668px;
     display: flex;
     flex-direction: row;
-    width: 668px;
     margin: 0 auto;
+  }
+
+  .catalog-part__link {
+    width: 334px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .catalog-part {
+@media (min-width: @desctop-width) {
+  .catalog-part__wrapper {
     width: 1050px;
+    display: flex;
+    flex-direction: row;
     margin: 0 auto;
+  }
+
+  .catalog-part__link {
+    width: 525px;
   }
 }
