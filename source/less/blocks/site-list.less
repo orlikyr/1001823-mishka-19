@@ -1,3 +1,38 @@
+.site-list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .site-list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .site-list__item--catalog {
+    order: 3;
+  }
+
+  .site-list__item--knitting {
+    order: 4;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .site-list__item--catalog {
+    order: 0;
+  }
+
+  .site-list__item--knitting {
+    margin-right: auto;
+    order: 0;
+  }
+
+  .site-list__item--search {
+    margin-left: auto;
+  }
+}
+
 .site-list__link {
   color: @color-title-black;
 }

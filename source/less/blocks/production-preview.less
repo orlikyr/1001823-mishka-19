@@ -1,6 +1,5 @@
 .production-preview__wrapper {
   margin-top: 30px;
-  margin-left: 30px;
   margin-bottom: 58px;
   border: 1px solid @color-catalog-item-border;
 }
@@ -18,4 +17,32 @@
 .production-preview__order {
   .text(17px; 16px; 700);
   color: @color-btn-text;
+}
+
+@media (min-width: @tablet-width) {
+  .production-preview__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production-preview__video {
+    order: -1;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .production-preview__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .production-preview__start-video {
+    width: 101px;
+    height: 77px;
+  }
+
+  .production-preview__video {
+    width: 682px;
+  }
 }

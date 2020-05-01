@@ -1,6 +1,5 @@
 .product {
-  padding-left: 32px;
-  padding-top: 34px;
+  margin-top: 34px;
 }
 
 .product__item-title {
@@ -35,4 +34,37 @@
 .product__order {
   .text(17px; 20px; 700);
   color: @color-btn-text;
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    position: relative;
+  }
+
+  .product__wrapper {
+    width: 292px;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .product__image {
+    width: 333px;
+    height: 404px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .product__image {
+    width: 525px;
+    height: 636px;
+  }
+
+  .product__order {
+    width: 292px;
+    display: block;
+  }
 }

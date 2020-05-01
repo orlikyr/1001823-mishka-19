@@ -1,5 +1,4 @@
 .about-us {
-  padding-left: 30px;
   padding-top: 34px;
 }
 
@@ -12,6 +11,8 @@
 
 .about-us__list {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .about-us__item {
@@ -22,4 +23,16 @@
 
 .about-us__item:last-child {
   margin-bottom: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .about-us__list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .about-us__item {
+    width: 292px;
+  }
 }

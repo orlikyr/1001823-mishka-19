@@ -19,16 +19,16 @@
       <button class="main-nav__toggle" type="button">Открыть меню</button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list site-list">
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--catalog">
             <a class="site-list__link" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--knitting">
             <a class="site-list__link" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--search">
             <a class="site-list__link" href="#">Поиск по сайту</a>
           </li>
-          <li class="site-list__item">
+          <li class="site-list__item site-list__item--pannier">
             <a class="site-list__link" href="#">Корзина: пока пуста</a>
           </li>
         </ul>
@@ -43,15 +43,21 @@
 
     <section class="catalog-part">
       <h2 class="visually-hidden">Виды товаров</h2>
-      <a class="catalog-part__link catalog-part__link--interior" href="#">
-        <span class="catalog-part__text">Предметы интерьера</span>
-      </a>
-      <a class="catalog-part__link catalog-part__link--toys" href="#">
-        <span class="catalog-part__text">Детские игрушки</span>
-      </a>
+      <div class="catalog-part__wrapper">
+        <a class="catalog-part__link catalog-part__link--interior" href="#">
+          <div class="catalog-part__link-container">
+            <span class="catalog-part__text">Предметы интерьера</span>
+          </div>
+        </a>
+        <a class="catalog-part__link catalog-part__link--toys" href="#">
+          <div class="catalog-part__link-container">
+            <span class="catalog-part__text">Детские игрушки</span>
+          </div>
+        </a>
+      </div>
     </section>
 
-    <section class="product">
+    <section class="product container">
       <div class="product__wrapper">
         <h3 class="product__item-title">Вязаные корзинки</h3>
         <h2 class="product__title">Товар недели</h2>
@@ -91,7 +97,7 @@
     </section>
 
     <section class="about-us">
-      <div class="about-us__wrapper">
+      <div class="about-us__wrapper container">
         <h2 class="about-us__title">Коротко о нас:</h2>
         <ul class="about-us__list">
           <li class="about-us__item about-us__item--flower">Экологически чистые материалы</li>
@@ -105,7 +111,7 @@
     </section>
 
     <section class="reviews">
-      <div class="reviews__wrapper">
+      <div class="reviews__wrapper container">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list">
           <blockquote class="reviews__item">
@@ -128,40 +134,44 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <div class="page-footer__contacts contacts">
-        <h2 class="contacts__title">Контакты</h2>
-        <p class="contacts__text">
-          <span class="contacts__view">e-mail</span>
-          <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
-        </p>
-        <p class="contacts__text">
-          <span class="contacts__view">адрес:</span>
-          <span class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
-        </p>
-        <div class="contacts__map">
-          <span class="visually-hidden">Карта</span>
+        <div class="contacts__wrapper container">
+          <h2 class="contacts__title">Контакты</h2>
+          <p class="contacts__text">
+            <span class="contacts__view">e-mail</span>
+            <a class="contacts__email" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
+          </p>
+          <p class="contacts__text">
+            <span class="contacts__view">адрес:</span>
+            <span class="contacts__address">г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101</span>
+          </p>
+          <div class="contacts__map">
+            <span class="visually-hidden">Карта</span>
+          </div>
+          <a class="contacts__write-us button" href="#">Напишите нам</a>
         </div>
-        <a class="contacts__write-us button" href="#">Напишите нам</a>
       </div>
       <div class="page-footer__social-copyright">
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--instagramm" href="#"><span class="visually-hidden">Мы в
-                  Инстаграмме</span></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в
-                  Фейсбуке</span></a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в
-                  Твиттере</span></a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <span class="copyright__text">Разработано</span>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <div class="page-footer__social-wrapper container">
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--instagramm" href="#"><span class="visually-hidden">Мы в
+                    Инстаграмме</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в
+                    Фейсбуке</span></a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в
+                    Твиттере</span></a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <span class="copyright__text">Разработано</span>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+          </div>
         </div>
       </div>
     </div>

@@ -1,8 +1,17 @@
 .main-nav {
+  width: 320px;
+  margin: 0 auto;
   .text(17px; 24px; 700);
   color: @color-title-black;
 }
 
 .main-nav__list {
   list-style: none;
+}
+
+@media (min-width: @tablet-width) {
+  .main-nav {
+    width: auto;
+    margin: 0;
+  }
 }
