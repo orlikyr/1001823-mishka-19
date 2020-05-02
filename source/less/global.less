@@ -58,3 +58,23 @@ img {
     width: @desctop-width;
   }
 }
+
+.wrapper {
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .wrapper {
+    width: @tablet-width;
+    padding: 0 52px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .wrapper {
+    width: @desctop-width;
+    padding: 0 114px;
+  }
+}

@@ -1,24 +1,24 @@
-.form-page {
-  padding-left: 30px;
-}
-
-.form-page__wrapper {
-  width: 320px;
-  background-color: @color-form-page-title-bg;
-  padding-top: 71px;
-  padding-bottom: 76px;
-  padding-left: 38px;
-  margin-bottom: 29px;
-}
-
-.form-page__title {
-  .text(27px; 30px; 700);
-  color: @color-title-black;
-  margin: 0;
-}
-
 .form-page__text {
   .text (13px; 24px; 400);
   margin: 0;
-  margin-bottom: 30px;
+}
+
+.form-page__text-wrapper {
+  width: 320px;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .form-page__text-wrapper {
+    width: @tablet-width;
+    padding: 0 51px;
+  }
+}
+
+@media (min-width: @desctop-width) {
+  .form-page__text-wrapper {
+    width: @desctop-width;
+    padding: 0 225px;
+  }
 }
