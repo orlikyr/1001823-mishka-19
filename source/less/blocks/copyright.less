@@ -1,8 +1,49 @@
 .copyright {
-  margin-top: 28px;
+  position: relative;
+  padding-right: 60px;
+}
+
+.copyright__link {
+  color: @color-title-black;
+
+  &:hover svg {
+    fill: #46c1ae;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+
+    svg {
+      fill: #46c1ae;
+      fill-opacity: 0.3;
+    }
+  }
+}
+
+.copyright__link-logo {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: -3px;
+  right: 33px;
+  fill: #63d1bb;
 }
 
 .copyright__text {
   .text(19px; 18px; 700);
-  color: @color-title-black;
+}
+
+@media (min-width: @tablet-width) {
+  .copyright {
+    padding-left: 17px;
+  }
+
+  .copyright__link-logo {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    top: -2px;
+    right: -5px;
+    fill: #63d1bb;
+  }
 }

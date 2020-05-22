@@ -1,7 +1,22 @@
 .production-preview__wrapper {
   margin-top: 30px;
-  margin-bottom: 58px;
+  margin-bottom: 57px;
   border: 1px solid @color-catalog-item-border;
+}
+
+.production-preview__title-wrapper {
+  position: relative;
+  padding: 25px 43px 23px 90px;
+}
+
+.production-preview__title-icon {
+  position: absolute;
+  content: "";
+  width: 42px;
+  height: 32px;
+  top: 30px;
+  left: 29px;
+  fill: #63d1bb;
 }
 
 .production-preview__title {
@@ -10,39 +25,215 @@
   margin: 0;
 }
 
+.production-preview__video-wrapper {
+  position: relative;
+}
+
+.production-preview__start-video {
+  position: absolute;
+  content: "";
+  width: 101px;
+  height: 77px;
+  top: 37px;
+  left: 80px;
+  cursor: pointer;
+  border: none;
+  background-image: url("../img/icon-play.svg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-color: transparent;
+
+  &:hover {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    transform: scale(0.8);
+    opacity: 0.3;
+  }
+}
+
+.production-preview__description-wrapper {
+  padding: 28px 32px 33px 34px;
+}
+
 .production-preview__description {
   .text(13px; 24px; 400);
+  margin: 0;
 }
 
 .production-preview__order {
+  display: block;
+  width: 192px;
   .text(17px; 16px; 700);
   color: @color-btn-text;
+  margin-top: 25px;
+  padding-top: 17px;
+  padding-bottom: 15px;
 }
 
 @media (min-width: @tablet-width) {
-  .production-preview__wrapper {
+  .production-preview {
+    margin-top: -1px;
+    margin-bottom: 63px;
+  }
+
+  .production-preview__wrapper-content {
     display: flex;
     flex-direction: column;
   }
 
-  .production-preview__video {
+  .production-preview__title-wrapper {
+    padding: 37px 40px 0 107px;
+  }
+
+  .production-preview__title {
+    font-size: 20px;
+  }
+
+  .production-preview__title-icon {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 32px;
+    top: 32px;
+    left: 38px;
+    fill: #63d1bb;
+  }
+
+  .production-preview__video-wrapper {
     order: -1;
+  }
+
+  .production-preview__video {
+    width: 668px;
+    height: 455px;
+  }
+
+  .production-preview__start-video {
+    position: absolute;
+    content: "";
+    width: 101px;
+    height: 77px;
+    top: 188px;
+    left: 285px;
+    cursor: pointer;
+    border: none;
+    background-image: url("../img/icon-play.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
+  }
+
+  .production-preview__description-wrapper {
+    padding: 31px 34px 46px 42px;
+  }
+
+  .production-preview__description {
+    .text(15px; 30px; 400);
+  }
+
+  .production-preview__order {
+    width: 584px;
+    margin-top: 36px;
   }
 }
 
 @media (min-width: @desctop-width) {
+  .production-preview {
+    margin-top: 3px;
+    margin-bottom: 104px;
+  }
+
   .production-preview__wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    width: 1049px;
+    min-height: 455px;
+    position: relative;
+    margin: 0;
+  }
+
+  .production-preview__wrapper-content {
+    width: 367px;
+    margin-left: auto;
+    padding: 42px 52px 60px 80px;
+
+    &:hover {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+
+    &:active {
+      box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .production-preview__title-wrapper {
+    padding: 53px 140px 0 0;
+  }
+
+  .production-preview__title-icon {
+    position: absolute;
+    content: "";
+    width: 42px;
+    height: 32px;
+    top: 0;
+    left: -2px;
+    fill: #63d1bb;
+  }
+
+  .production-preview__video-wrapper {
+    position: absolute;
+    content: "";
+    width: 682px;
+    height: 455px;
+    top: 0;
+    left: 0;
   }
 
   .production-preview__start-video {
+    position: absolute;
+    content: "";
     width: 101px;
     height: 77px;
+    top: 190px;
+    left: 291px;
+    cursor: pointer;
+    border: none;
+    background-image: url("../img/icon-play.svg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
+    }
   }
 
   .production-preview__video {
     width: 682px;
+  }
+
+  .production-preview__description-wrapper {
+    padding: 0;
+    padding-top: 33px;
+  }
+
+  .production-preview__order {
+    width: 230px;
+    margin-top: 46px;
+    margin-left: 3px;
   }
 }
