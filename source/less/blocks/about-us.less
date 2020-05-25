@@ -228,11 +228,11 @@
 
 @media (min-width: @desctop-width) {
   .about-us {
+    position: static;
     padding-top: 83px;
 
     &::before {
-      height: 23px;
-      background-size: auto 23px;
+      display: none;
     }
   }
 
@@ -241,11 +241,24 @@
   }
 
   .about-us__wrapper {
+    position: relative;
     padding-left: 225px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: -82px;
+      left: -21px;
+      width: 100%;
+      height: 23px;
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-repeat: repeat-x;
+      background-size: auto 21px;
+    }
   }
 
   .about-us__list {
-    width: 1000px;
+    width: 800px;
   }
 
   .about-us__item {
