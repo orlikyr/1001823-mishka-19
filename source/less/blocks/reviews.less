@@ -95,6 +95,11 @@
       left: 0;
       background-image: url("../img/review@1x.jpg");
       z-index: -1;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+        background-size: 350px auto;
+      }
     }
   }
 
@@ -170,6 +175,10 @@
       left: 52px;
       background-image: url("../img/review@1x.jpg");
       z-index: -1;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/review@2x.jpg");
+      }
     }
   }
 
