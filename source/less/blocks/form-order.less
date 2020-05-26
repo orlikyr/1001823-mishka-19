@@ -1,0 +1,125 @@
+.form-order {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 320px;
+  background-color: @color-menu-white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  height: 336px;
+  box-shadow: 0 5px 10px 0 rgba(0, 1, 1, 0.25);
+  border: solid 1px #c6c6c6;
+}
+
+.form-order__title {
+  .text(25px; 30px; 700);
+  font-style: normal;
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-title-black;
+  margin: 0;
+  padding-top: 30px;
+  padding-left: 80px;
+  padding-right: 80px;
+  padding-bottom: 11px;
+}
+
+.form-order__fieldset {
+  border: none;
+  padding-top: 38px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 0;
+  margin-bottom: 45px;
+}
+
+.form-order__legend {
+  .text(15px; 30px; 400);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.form-order__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form-order__label {
+  .text(17px; 16px; 700);
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 13px;
+  padding-left: 35px;
+  padding-right: 33px;
+  padding-bottom: 12px;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+
+  &--checkbox {
+    &:hover {
+      border-color: rgba(68, 68, 68, 0.3);
+    }
+
+    &:active {
+      border-color: #62d1ba;
+    }
+  }
+}
+
+.form-order__control {
+  &--checkbox:checked + .form-order__label {
+    border-color: @color-fieldset-border;
+  }
+}
+
+.form-order__button {
+  padding: 14px 10px;
+  width: 260px;
+  margin: 0 auto;
+  border: 2px solid @color-fieldset-border;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @color-fieldset-border;
+}
+
+@media (min-width: @tablet-width) {
+  .form-order {
+    width: 568px;
+  }
+
+  .form-order__title {
+    .text(30px; 57px; 700);
+    padding-top: 34px;
+    padding-left: 83px;
+  }
+
+  .form-order__fieldset {
+    padding-left: 104px;
+    padding-right: 104px;
+  }
+
+  .form-order__legend {
+    font-size: 17px;
+  }
+
+  .form-order__label {
+    padding-left: 49px;
+    padding-right: 49px;
+  }
+
+  .form-order__button {
+    width: 350px;
+  }
+}

@@ -17,17 +17,24 @@
           <div class="main-nav__container">
             <div class="main-nav__logo-container">
               <a class="main-nav__logo" href="index.html">
-                <img class="main-nav__logo-mobile" src="img/logo-mobile.svg" width="86" height="35" alt="Логотип Мишка">
-                <img class="main-nav__logo-tablet" src="img/logo-tablet.svg" width="112" height="46"
-                  alt="Логотип Мишка">
-                <img class="main-nav__logo-desctop" src="img/logo-desktop.svg" width="149" height="72"
-                  alt="Логотип Мишка">
+                <picture>
+                  <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                  <img class="main-nav__logo-image" src="img/logo-mobile.svg" width="86" height="35"
+                    alt="Логотип Мишка">
+                </picture>
               </a>
             </div>
-            <button class="main-nav__toggle main-nav__toggle--close" type="button"><span class="visually-hidden">Открыть
-                меню</span></button>
+            <!-- main-nav__toggle--close / --open - управление внешним видом кнопки -->
+            <!-- main-nav__toggle--nojs - открытие / закрытие меню при вкл/ откл js -->
+            <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
           </div>
-          <ul class="main-nav__list main-nav__list--menu">
+          <!-- main-nav__list--open - при наличии JS меню открывается -->
+          <!-- main-nav__list--close - при наличии JS меню зарывается -->
+          <!-- main-nav__list--nojs - при отсутсвии JS меню всегда отрыто -->
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--menu">
             <li class="main-nav__item main-nav__item--catalog">
               <a class="main-nav__link" href="catalog.html">
                 Каталог товаров
@@ -39,11 +46,10 @@
               </a>
             </li>
           </ul>
-          <ul class="main-nav__list main-nav__list--button">
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--button">
             <li class="main-nav__item main-nav__item--search">
               <a class="main-nav__link" href="#">
-                <svg class="main-nav__item-icon main-nav__item-icon--search" version="1.1" id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="main-nav__item-icon main-nav__item-icon--search" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="18px" height="18px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6"
                   xml:space="preserve">
                   <path
@@ -54,8 +60,7 @@
             </li>
             <li class="main-nav__item main-nav__item--pannier">
               <a class="main-nav__link" href="#">
-                <svg class="main-nav__item-icon main-nav__item-icon--pannier" version="1.1" id="Layer_1"
-                  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                <svg class="main-nav__item-icon main-nav__item-icon--pannier" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="21px" height="18px" viewBox="264.205 370.961 20.294 18.849"
                   enable-background="new 264.205 370.961 20.294 18.849" xml:space="preserve">
                   <path
@@ -77,7 +82,7 @@
               </a>
             </li>
           </ul>
-          <div class="main-nav__wrapper-delivery">
+          <div class="main-nav__list main-nav__list--delivery">
             <span class="main-nav__text-delivery">Бесплатная доставка по России</span>
           </div>
         </div>
@@ -98,7 +103,7 @@
           свяжемся с вами, чтобы уточнить детали.</p>
       </div>
       <div class="form-page__container">
-        <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="form__part-wrapper">
             <div class="form__part wrapper">
               <fieldset class="form__fieldset">
@@ -239,8 +244,7 @@
                       <label class="form__label form__label--text" for="tel"></label>
                       <input class="form__control form__control--tel" type="tel" name="tel" id="tel"
                         placeholder="+7 ХХХ ХХХ ХХ ХХ*" pattern="+7-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
-                      <svg class="form__icon form__icon--tel" version="1.1" id="Layer_2"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <svg class="form__icon form__icon--tel" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="24.829px" height="24.333px" viewBox="0 0 24.829 24.333"
                         enable-background="new 0 0 24.829 24.333" xml:space="preserve">
                         <g>
@@ -276,8 +280,7 @@
                       <label class="form__label form__label--text" for="email"></label>
                       <input class="form__control form__control--email" type="email" name="email" id="email"
                         placeholder="Ваш Email*" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$">
-                      <svg class="form__icon form__icon--email" version="1.1" id="Layer_1"
-                        xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                      <svg class="form__icon form__icon--email" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="32px" height="32px" viewBox="0 0 32 32" enable-background="new 0 0 32 32"
                         xml:space="preserve">
                         <path id="mail"
@@ -307,6 +310,7 @@
                 </fieldset>
               </div>
             </div>
+          </div>
         </form>
       </div>
     </section>
@@ -319,7 +323,7 @@
         <div class="page-footer__social-wrapper container">
           <div class="page-footer__logo-wrapper">
             <a class="page-footer__logo" href="">
-              <svg class="page-footer__logo-icon" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+              <svg class="page-footer__logo-icon" version="1.1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="101.615px" height="34.056px"
                 viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
                 <g>
@@ -346,8 +350,7 @@
               <li class="social__item">
                 <a class="social__link social__link--instagramm" href="#"><span class="visually-hidden">Мы в
                     Инстаграмме</span>
-                  <svg class="social__icon social__icon--instagramm" version="1.1" id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="social__icon social__icon--instagramm" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="21.769px" height="21.334px" viewBox="53.115 53.19 21.769 21.334"
                     enable-background="new 53.115 53.19 21.769 21.334" xml:space="preserve">
                     <g id="instagram">
@@ -362,8 +365,7 @@
               <li class="social__item">
                 <a class="social__link social__link--facebook" href="#"><span class="visually-hidden">Мы в
                     Фейсбуке</span>
-                  <svg class="social__icon social__icon--facebook" version="1.1" id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="social__icon social__icon--facebook" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="14.962px" height="27.718px" viewBox="56.519 49.996 14.962 27.718"
                     enable-background="new 56.519 49.996 14.962 27.718" xml:space="preserve">
                     <g id="facebook">
@@ -378,8 +380,7 @@
               <li class="social__item">
                 <a class="social__link social__link--twitter" href="#"><span class="visually-hidden">Мы в
                     Твиттере</span>
-                  <svg class="social__icon social__icon--twitter" version="1.1" id="Layer_1"
-                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  <svg class="social__icon social__icon--twitter" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="23.494px" height="20.168px" viewBox="52.253 53.771 23.494 20.168"
                     enable-background="new 52.253 53.771 23.494 20.168" xml:space="preserve">
                     <g id="twitter">
@@ -407,6 +408,8 @@
       </div>
     </div>
   </footer>
+
+  <script src="js/picturefill.min.js"></script>
 
 </body>
 
