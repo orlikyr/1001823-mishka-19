@@ -25,10 +25,16 @@
                 </picture>
               </a>
             </div>
-            <button class="main-nav__toggle main-nav__toggle--close" type="button"><span class="visually-hidden">Открыть
-                меню</span></button>
+            <!-- main-nav__toggle--close / --open - управление внешним видом кнопки -->
+            <!-- main-nav__toggle--nojs - открытие / закрытие меню при вкл/ откл js -->
+            <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
           </div>
-          <ul class="main-nav__list main-nav__list--menu">
+          <!-- main-nav__list--open - при наличии JS меню открывается -->
+          <!-- main-nav__list--close - при наличии JS меню зарывается -->
+          <!-- main-nav__list--nojs - при отсутсвии JS меню всегда отрыто -->
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--menu">
             <li class="main-nav__item main-nav__item--catalog">
               <a class="main-nav__link" href="catalog.html">
                 Каталог товаров
@@ -40,7 +46,7 @@
               </a>
             </li>
           </ul>
-          <ul class="main-nav__list main-nav__list--button">
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--button">
             <li class="main-nav__item main-nav__item--search">
               <a class="main-nav__link" href="#">
                 <svg class="main-nav__item-icon main-nav__item-icon--search" version="1.1" id="Layer_1"
@@ -78,7 +84,7 @@
               </a>
             </li>
           </ul>
-          <div class="main-nav__wrapper-delivery">
+          <div class="main-nav__list main-nav__list--delivery">
             <span class="main-nav__text-delivery">Бесплатная доставка по России</span>
           </div>
         </div>
@@ -99,7 +105,7 @@
           свяжемся с вами, чтобы уточнить детали.</p>
       </div>
       <div class="form-page__container">
-        <form class="form" action="https://echo.htmlacademy.ru" method="get">
+        <form class="form" action="https://echo.htmlacademy.ru" method="POST">
           <div class="form__part-wrapper">
             <div class="form__part wrapper">
               <fieldset class="form__fieldset">

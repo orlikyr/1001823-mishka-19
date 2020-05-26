@@ -25,10 +25,16 @@
                 </picture>
               </a>
             </div>
-            <button class="main-nav__toggle main-nav__toggle--close" type="button"><span class="visually-hidden">Открыть
-                меню</span></button>
+            <!-- main-nav__toggle--close / --open - управление внешним видом кнопки -->
+            <!-- main-nav__toggle--nojs - открытие / закрытие меню при вкл/ откл js -->
+            <button class="main-nav__toggle main-nav__toggle--nojs" type="button">
+              <span class="visually-hidden">Открыть меню</span>
+            </button>
           </div>
-          <ul class="main-nav__list main-nav__list--menu">
+          <!-- main-nav__list--open - при наличии JS меню открывается -->
+          <!-- main-nav__list--close - при наличии JS меню зарывается -->
+          <!-- main-nav__list--nojs - при отсутсвии JS меню всегда отрыто -->
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--menu">
             <li class="main-nav__item main-nav__item--catalog">
               <a class="main-nav__link" href="#">
                 Каталог товаров
@@ -40,7 +46,7 @@
               </a>
             </li>
           </ul>
-          <ul class="main-nav__list main-nav__list--button">
+          <ul class="main-nav__list main-nav__list--nojs main-nav__list--button">
             <li class="main-nav__item main-nav__item--search">
               <a class="main-nav__link" href="#">
                 <svg class="main-nav__item-icon main-nav__item-icon--search" version="1.1" id="Layer_1"
@@ -78,7 +84,7 @@
               </a>
             </li>
           </ul>
-          <div class="main-nav__wrapper-delivery">
+          <div class="main-nav__list main-nav__list--delivery">
             <span class="main-nav__text-delivery">Бесплатная доставка по России</span>
           </div>
         </div>
@@ -141,7 +147,7 @@
                 <source media="(min-width: 768px)"
                   srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
                 <img class="catalog-card__image" src="img/photo-bowl-mobile@1x.jpg"
-                  srcset="img/photo-bowl-mobile@1x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
+                  srcset="img/photo-bowl-mobile@2x.jpg 2x" width="260" height="195" alt="Корзинка для белья">
               </picture>
             </a>
             <div class="catalog-card__text-wrapper">
@@ -337,7 +343,37 @@
     </div>
   </footer>
 
-
+  <!-- modal-order--open - Открывает попап при наличии JS -->
+  <!-- modal-order--close - Закрывает попап при наличии JS -->
+  <!-- modal-order--nojs - При отстуствиии JS попап скрыт -->
+  <div class="modal-order modal-order--nojs">
+    <div class="modal-order__wrapper modal-order__wrapper--nojs">
+      <form class="form-order">
+        <h2 class="form-order__title">Добавить в корзину</h2>
+        <fieldset class="form-order__fieldset">
+          <legend class="form-order__legend">Выберите размер:</legend>
+          <ul class="form-order__list">
+            <li class="form-order__list-item">
+              <input class="form-order__control form-order__control--checkbox visually-hidden" type="checkbox"
+                id="size-s" name="size" checked>
+              <label class="form-order__label form-order__label--checkbox" for="size-s">S</label>
+            </li>
+            <li class="form-order__list-item">
+              <input class="form-order__control form-order__control--checkbox visually-hidden" type="checkbox"
+                id="size-m" name="size">
+              <label class="form-order__label form-order__label--checkbox" for="size-m">M</label>
+            </li>
+            <li class="form-order__list-item">
+              <input class="form-order__control form-order__control--checkbox visually-hidden" type="checkbox"
+                id="size-l" name="size">
+              <label class="form-order__label form-order__label--checkbox" for="size-l">L</label>
+            </li>
+          </ul>
+        </fieldset>
+        <button class="form-order__button form-order__button--green" type="button">Добавить</button>
+      </form>
+    </div>
+  </div>
 </body>
 
 </html>
