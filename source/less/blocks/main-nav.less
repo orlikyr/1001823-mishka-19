@@ -45,6 +45,19 @@
 
 .main-nav__link {
   color: @color-title-black;
+  position: relative;
+  display: block;
+
+  &::before {
+    content: “”;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
 
   &:hover {
     color: @color-link-hover;
@@ -72,8 +85,8 @@
   position: absolute;
   width: 21px;
   height: 18px;
-  top: 30px;
-  left: 30px;
+  top: 3px;
+  left: -46px;
   fill: #d4d3d3;
 }
 
@@ -149,9 +162,17 @@
     position: absolute;
     width: 21px;
     height: 18px;
-    top: 36px;
-    left: 31px;
     fill: #d4d3d3;
+
+    &--search {
+      top: 35px;
+      left: 31px;
+    }
+
+    &--pannier {
+      top: 3px;
+      left: -51px;
+    }
   }
 
   .main-nav__list--special-off {

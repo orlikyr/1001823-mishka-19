@@ -5,10 +5,22 @@
 
 .catalog-part__link {
   display: inline-block;
+  position: relative;
   vertical-align: top;
   padding-top: 25px;
   padding-bottom: 26px;
   color: @color-catalog-link;
+
+  &::before {
+    content: “”;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
 }
 
 .catalog-part__link-container {
