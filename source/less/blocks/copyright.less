@@ -1,10 +1,25 @@
-.copyright {
-  position: relative;
-  padding-right: 60px;
-}
-
 .copyright__link {
   color: @color-title-black;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-right: 45px;
+
+  &::before {
+    content: “”;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  svg {
+    pointer-events: none;
+  }
 
   &:hover svg {
     fill: #46c1ae;
@@ -43,7 +58,7 @@
     width: 38px;
     height: 38px;
     top: -3px;
-    right: -67px;
+    right: -5px;
     fill: #63d1bb;
   }
 }
