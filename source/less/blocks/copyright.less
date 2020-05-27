@@ -5,19 +5,6 @@
 
 .copyright__link {
   color: @color-title-black;
-  position: relative;
-  display: block;
-
-  &::before {
-    content: “”;
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: 100;
-  }
 
   &:hover svg {
     fill: #46c1ae;
@@ -64,5 +51,10 @@
 @media (min-width: @desctop-width) {
   .copyright {
     padding-left: 19px;
+  }
+
+  .copyright__link-logo {
+    top: -2px;
+    right: -8px;
   }
 }
